@@ -74,11 +74,12 @@ body {
 
 .social-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 24px;
 }
 
-.social-item > a {
-    display: inline-flex;
+.social-item-link{
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 40px;
@@ -87,19 +88,21 @@ body {
     color: var(--cloud-color);
     border-radius: 50%;
 }
-
-.social-item > a:hover {
-    background-color: var(--success-color);
+.social-item-link:hover,
+.social-item-link:focus {
+    background-color: #404bbf;
 }
 
-.social-item svg {
+.icon {
     fill: currentColor;
 }
 /* ============================
             Header
 ==============================*/
 .header{
-    border-bottom: 1px solid #E7E9FC;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .header-container a:hover,
 .header-container a:focus{
@@ -144,10 +147,10 @@ body {
             First section
 ==============================*/
 .first-section {
-    background-image: 
-    linear-gradient(var(--hero-back), var(--hero-back)),
-    url('../images/hero/heroBack.png');
+    background-image: linear-gradient(var(--hero-back), var(--hero-back)),
+    url(../images/img-name.jpg);
     background-repeat: no-repeat;
+    background-position: center;
     max-width: 1440px;
     background-size: cover;
     
@@ -197,6 +200,13 @@ body {
     width: calc((100% - 72px) / 4);
 }
 .feature-icon-wrap{
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    height: 112px;
+    border-radius: 4px;
     padding: 24px 100px;
     background-color: var(--cloud-color);
     margin-bottom: 8px;
@@ -237,12 +247,13 @@ body {
     text-align: center;
     width: calc((100% - 72px) / 4);
 
+    border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.078), 
         0px 1px 1px 0px rgba(46, 47, 66, 0.161), 
         0px 1px 6px 0px rgba(46, 47, 66, 0.078);
 }
 .team-card-wrap {
-    padding: 32px 16px;
+    padding: 32px 0;
     border-radius: 0px 0px 4px 4px;
 }
 .team-card-wrap > h3, .team-card-wrap > p {
@@ -251,14 +262,22 @@ body {
 /* ============================
             Customers section
 ==============================*/
+.customers-title{
+    font-size: 36px;
+}
 .customers-list{
     display: flex;
     gap: 24px;
 }
-.customers-link{
-    display: block;
-
+.customers-item{
+    height: 88px;
     width: 168px;
+}
+.customers-link{
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
     padding: 15px 31px;
 
     border: 1px solid #8E8F99;
@@ -282,6 +301,8 @@ body {
 }
 .footer-wrap {
     display: flex;
+    align-items: baseline;
+    gap: 120px;
 }
 .footer-logo {
     display: inline-block;
@@ -289,12 +310,12 @@ body {
 }
 .footer-container {
     width: 264px;
-    margin-right: 120px;
 }
 .footer-text {
     color: var(--cloud-color);
 }
 .footer-social-list {
+    gap: 16px;
     width: 208px;
 }
 .footer-social-text{
@@ -347,9 +368,14 @@ body {
     width: calc((100% - 48px) / 3);
     background: var(--white-color);
 }
+.portfolio-card-link{
+    display: block;
+}
 .portfolio-card-link:hover .portfolio-card-item,
 .portfolio-card-link:focus .portfolio-card-item {
-    box-shadow: 0px 1px 6px 0px #2E2F4214;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .portfolio-card-content {
     padding: 32px 16px;
