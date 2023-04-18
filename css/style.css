@@ -126,6 +126,7 @@ body {
     color: var(--title-color);
 }
 .header-nav-link {
+    font-weight: 500;
     display: block;
     color: var(--title-color);
     padding: 24px 0;
@@ -148,6 +149,7 @@ body {
             First section
 ==============================*/
 .first-section {
+    background-color: var(--title-color);
     background-image: linear-gradient(var(--hero-back), var(--hero-back)),
     url(../images/img-name.jpg);
     background-repeat: no-repeat;
@@ -208,7 +210,6 @@ body {
 
     height: 112px;
     border-radius: 4px;
-    padding: 24px 100px;
     background-color: var(--cloud-color);
     margin-bottom: 8px;
 }
@@ -276,11 +277,11 @@ body {
 
     align-items: center;
     justify-content: center;
-    padding: 15px 31px;
 
     border: 1px solid #8E8F99;
     color: var(--light-slate);
     border-radius: 4px;
+    height: 100%;
 }
 .customers-link:hover,
 .customers-link:focus {
