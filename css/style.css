@@ -301,7 +301,6 @@ body {
 .footer-wrap {
     display: flex;
     align-items: baseline;
-    gap: 120px;
 }
 .footer-logo {
     display: inline-block;
@@ -309,6 +308,7 @@ body {
 }
 .footer-container {
     width: 264px;
+    margin-right: 120px;
 }
 .footer-text {
     color: var(--cloud-color);
